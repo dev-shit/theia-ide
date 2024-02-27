@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y python python-pip
 RUN pip install python-language-server
 RUN apt-get -y install ruby ruby-dev zlib1g-dev
 RUN gem install thor -v 1.2.2
+RUN gem install rubocop-ast -v '< 2.0, >= 1.30.0'
 RUN gem install solargraph -v '< 0.40.0'
 RUN mkdir -p /home/project && mkdir -p /home/theia
 WORKDIR /home/theia
